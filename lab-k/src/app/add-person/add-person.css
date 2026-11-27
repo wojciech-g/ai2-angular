@@ -1,0 +1,16 @@
+.form-row {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.address {
+  background: #eee;
+  padding: 10px 0;
+  margin: 15px 0;
+}
+
+button {
+  width: 180px;
+}

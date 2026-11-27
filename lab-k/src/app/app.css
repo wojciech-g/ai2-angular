@@ -1,0 +1,30 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background: #303a85;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+}
+
+.router-outlet {
+  flex: 1;
+  padding: 20px;
+}
+
+footer {
+  background: #087f45;
+  color: white;
+  padding: 10px 20px;
+}
