@@ -1,0 +1,15 @@
+<div id="frame">
+  <div>List component</div>
+  <div>
+    <input type="text" [(ngModel)]="inputText">
+    <button (click)="inputToArray()">Dodaj</button>
+  </div>
+  <ul>
+    @for (el of elements; track $index; let i = $index) {
+      <li>
+        {{ el }}
+        <a href="#" (click)="remove(i)">usuń</a>
+      </li>
+    }
+  </ul>
+</div>
