@@ -1,0 +1,12 @@
+{
+  "todos": [
+    {
+      "id": "1",
+      "title": "Hello World",
+      "deadline": "1900-01-01",
+      "completed": false,
+      "archived": false
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
