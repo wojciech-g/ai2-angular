@@ -1,0 +1,31 @@
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.new-task {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.new-task button {
+  margin-top: 8px;
+}
+
+mat-card {
+  margin-bottom: 10px;
+}
+
+mat-card.completed {
+  opacity: 0.6;
+}
+
+mat-card.completed mat-card-title {
+  text-decoration: line-through;
+}
+
+.archive {
+  margin-top: 10px;
+}

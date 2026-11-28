@@ -1,0 +1,60 @@
+@baseUrl = http://localhost:52703/todos
+
+### GET list of tasks
+GET {{baseUrl}}
+Accept: application/json
+
+### GET list of non-completed tasks
+GET {{baseUrl}}?completed=false
+Accept: application/json
+
+### GET list of non-archived tasks
+GET {{baseUrl}}?archived=false
+Accept: application/json
+
+### GET list of tasks sorted by ID ASC
+GET {{baseUrl}}?_sort=id
+Accept: application/json
+
+### GET list of tasks sorted by ID DESC
+GET {{baseUrl}}?_sort=-id
+Accept: application/json
+
+### GET single task
+GET {{baseUrl}}/1
+Accept: application/json
+
+### POST new task
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+  "title": "First Task",
+  "deadline": "2030-01-01",
+  "completed": false,
+  "archived": false
+}
+
+> {% client.global.set("newId", response.body.id); %}
+
+### PUT update task: completed
+PUT {{baseUrl}}/{{newId}}
+Content-Type: application/json
+
+{
+  "title": "First Task",
+  "deadline": "2030-01-01",
+  "completed": true,
+  "archived": false
+}
+
+### PUT update task: archived
+PUT {{baseUrl}}/{{newId}}
+Content-Type: application/json
+
+{
+  "title": "First Task",
+  "deadline": "2030-01-01",
+  "completed": true,
+  "archived": true
+}

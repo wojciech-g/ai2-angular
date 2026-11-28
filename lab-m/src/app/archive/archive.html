@@ -1,0 +1,20 @@
+<div class="container">
+  <h2>Archive</h2>
+  <div class="tasks">
+    @for (task of tasks; track task.id) {
+      <mat-card>
+        <mat-card-header>
+          @if (task.deadline) {
+            <mat-card-subtitle>{{ task.deadline | date: 'yyyy-MM-dd' }}</mat-card-subtitle>
+          }
+          <mat-card-title>{{ task.title }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-actions align="end">
+          <button matIconButton (click)="delete(task)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    }
+  </div>
+</div>
